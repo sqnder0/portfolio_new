@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" infinite="1" nextlayerid="2" nextobjectid="1">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="7">
  <editorsettings>
-  <export target="room_base..tmx" format="tmx"/>
+  <chunksize width="10" height="10"/>
+  <export target="room_base.json" format="json"/>
  </editorsettings>
- <tileset firstgid="1" source="Room.tsx"/>
- <layer id="1" name="Tile Layer 1" width="30" height="20">
+ <tileset firstgid="1" source="room_tileset.tsx"/>
+ <layer id="1" name="background" width="10" height="10">
   <data encoding="csv">
-   <chunk x="0" y="0" width="16" height="16">
-104,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,
-20,53,53,53,53,53,53,53,53,53,53,53,53,53,53,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-20,35,35,35,35,35,35,35,35,35,35,35,35,35,35,22,
-37,38,38,38,38,38,38,38,38,38,38,38,38,38,38,39
-</chunk>
-  </data>
+104,4,4,4,4,4,4,4,4,1610612775,
+20,53,53,53,53,53,53,53,53,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,1610612774,
+20,35,35,35,35,35,35,35,35,22,
+37,38,38,38,38,38,38,38,38,39
+</data>
  </layer>
+ <objectgroup id="3" name="furniture">
+  <object id="1" gid="32" x="256" y="256" width="32" height="32">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="2" gid="30" x="224" y="288" width="32" height="32">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="4" gid="82" x="258.182" y="278.364" width="32" height="32">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="5" gid="81" x="250" y="287.636" width="32" height="32">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="6" gid="32" x="193.333" y="257" width="32" height="32"/>
+ </objectgroup>
 </map>

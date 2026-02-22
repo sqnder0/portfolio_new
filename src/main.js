@@ -453,9 +453,11 @@ const config = {
   scene: [GameScene],
   pixelArt: true,
 };
+const game = new Phaser.Game(config);
 
-window.game = new Phaser.Game(config);
-window.scene = config.scene[0];
-
-
-console.log("Game initialized:", game);
+// Expose helpers only in dev for debugging.
+if (import.meta.env.DEV) {
+  window.game = game;
+  window.scene = config.scene[0];
+  console.log("Game initialized:", game);
+}

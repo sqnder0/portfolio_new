@@ -3,13 +3,23 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio</title>
+		<meta
+			name="description"
+			content="Interactive portfolio scene built with Phaser showcasing Sander Pelgrims."
+		/>
+		<meta name="theme-color" content="#181818" />
+		<title>Sander Pelgrims | Portfolio</title>
 		<link rel="stylesheet" href="/src/styles.css" />
 	</head>
 	<body>
 		<header>Sander Pelgrims</header>
-        <main><canvas id="gameCanvas"></canvas></main>
+        <main aria-label="Interactive portfolio scene">
+			<section class="game-shell">
+				<div id="gameRoot"></div>
+			</section>
+		</main>
         <footer><p>Made with ❤️ by Sander Pelgrims &copy;<span id="currentYear"></span></p></footer>
+		<noscript>This portfolio needs JavaScript enabled to render the interactive scene.</noscript>
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>

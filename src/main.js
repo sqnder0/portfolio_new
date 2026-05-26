@@ -3,7 +3,16 @@ import Phaser from "phaser";
 import { createDudeAnimations } from "./animations.js";
 
 const yearSpan = document.getElementById("currentYear");
-yearSpan.textContent = new Date().getFullYear();
+const gameRoot = document.getElementById("gameRoot");
+const GAME_SIZE = 600;
+
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+if (!gameRoot) {
+  throw new Error("Expected #gameRoot to exist before booting the game.");
+}
 
 class GameScene extends Phaser.Scene {
   constructor() {
@@ -440,10 +449,15 @@ class GameScene extends Phaser.Scene {
 }
 
 const config = {
-  type: Phaser.WEBGL,
-  width: 600,
-  height: 600,
-  canvas: gameCanvas,
+  type: Phaser.AUTO,
+  parent: gameRoot,
+  backgroundColor: "#181818",
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: GAME_SIZE,
+    height: GAME_SIZE,
+  },
   physics: {
     default: "matter",
     matter: {

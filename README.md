@@ -48,7 +48,7 @@ npm run build
 Output goes to `dist/`. You can preview it with `npm run preview`.
 
 ## Deploying with Nixpacks
-This repository includes `/tmp/workspace/sqnder0/portfolio_new/nixpacks.toml` so Nixpacks uses:
+This repository includes `nixpacks.toml` so Nixpacks uses:
 - setup: Node.js 20
 - install: `npm ci`
 - build: `npm run build`

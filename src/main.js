@@ -11,7 +11,9 @@ if (yearSpan) {
 }
 
 if (!gameRoot) {
-  throw new Error("Expected #gameRoot to exist before booting the game.");
+  throw new Error(
+    "Expected a #gameRoot element in index.html before booting the game."
+  );
 }
 
 class GameScene extends Phaser.Scene {

@@ -5,5 +5,12 @@ export default defineConfig({
   publicDir: 'public',
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          phaser: ['phaser'],
+        },
+      },
+    },
   },
 });

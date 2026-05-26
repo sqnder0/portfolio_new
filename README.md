@@ -21,6 +21,7 @@ A Phaser 3 + Vite project that renders a tile-based room/garden scene with Matte
 - `npm run dev` – Start Vite dev server.
 - `npm run build` – Production build to `dist/`.
 - `npm run preview` – Preview the production build locally.
+- `npm run start` – Production preview server bound to `0.0.0.0` and `PORT` (for Nixpacks/containers).
 
 ## Project Structure (excerpt)
 - `src/main.js` – Game setup, loading tilemaps/tilesets, Matter bodies, camera follow, animations.
@@ -45,6 +46,15 @@ A Phaser 3 + Vite project that renders a tile-based room/garden scene with Matte
 npm run build
 ```
 Output goes to `dist/`. You can preview it with `npm run preview`.
+
+## Deploying with Nixpacks
+This repository includes `nixpacks.toml` so Nixpacks uses:
+- setup: Node.js 20
+- install: `npm ci`
+- build: `npm run build`
+- start: `npm run start`
+
+At runtime, set `PORT` if your platform provides one (the start script already honors it).
 
 ## Troubleshooting
 - Port already in use: Vite auto-selects the next free port (shown in the console).

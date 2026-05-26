@@ -23,3 +23,8 @@ child.on("exit", (code, signal) => {
   }
   process.exit(code ?? 0);
 });
+
+child.on("error", (error) => {
+  console.error("Failed to start Vite preview:", error.message);
+  process.exit(1);
+});
